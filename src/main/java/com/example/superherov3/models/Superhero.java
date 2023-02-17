@@ -3,15 +3,15 @@ package com.example.superherov3.models;
 public class Superhero {
 
     private int id;
-    private String superheroName;
+    private java.lang.String superheroName;
     private double superheroHeight;
-    private String superheroPower;
-    private String superheroWeakness;
+    private java.lang.String superheroPower;
+    private java.lang.String superheroWeakness;
     private boolean superheroHumanOrNot;
 
 
     //Konstruktør
-    public Superhero(String superheroName, double superheroHeight, String superheroPower, String superheroWeakness, boolean superheroHumanOrNot) {
+    public Superhero(java.lang.String superheroName, double superheroHeight, java.lang.String superheroPower, java.lang.String superheroWeakness, boolean superheroHumanOrNot) {
         this.superheroName = superheroName;
         this.superheroHeight = superheroHeight;
         this.superheroPower = superheroPower;
@@ -21,7 +21,7 @@ public class Superhero {
 
 
     //get methods
-    public String getSuperheroName() {
+    public java.lang.String getSuperheroName() {
         return superheroName;
     }
 
@@ -29,12 +29,12 @@ public class Superhero {
         return superheroHeight;
     }
 
-    public String getSuperheroPower() {
+    public java.lang.String getSuperheroPower() {
         return superheroPower;
     }
 
 
-    public String getSuperheroWeakness() {
+    public java.lang.String getSuperheroWeakness() {
         return superheroWeakness;
     }
 
@@ -43,7 +43,7 @@ public class Superhero {
     }
 
     //set methods
-    public void setSuperheroName(String superheroName) {
+    public void setSuperheroName(java.lang.String superheroName) {
         this.superheroName = superheroName;
     }
 
@@ -51,11 +51,11 @@ public class Superhero {
         this.superheroHeight = superheroHeight;
     }
 
-    public void setSuperheroPower(String superheroPower) {
+    public void setSuperheroPower(java.lang.String superheroPower) {
         this.superheroPower = superheroPower;
     }
 
-    public void setSuperheroWeakness(String superheroWeakness) {
+    public void setSuperheroWeakness(java.lang.String superheroWeakness) {
         this.superheroWeakness = superheroWeakness;
     }
 
@@ -65,7 +65,7 @@ public class Superhero {
     }
 
 
-    public String toString() {
+    public java.lang.String toString() {
         return "Superhero name: " + superheroName +
                " Superhero height: " + superheroHeight +
                " Superhero power(s): " + superheroPower +
@@ -74,7 +74,7 @@ public class Superhero {
 
     }
 
-    public String csvToString() {
+    public java.lang.String csvToString() {
         return superheroName + "," + superheroHeight + "," + superheroPower + "," + superheroWeakness + "," + superheroHumanOrNot;
     }
 

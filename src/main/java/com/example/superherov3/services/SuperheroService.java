@@ -21,7 +21,21 @@ public class SuperheroService {
     }
 
 
-    public List<Superhero> searchHero(String superheroName) {
+    public Superhero searchHero(java.lang.String superheroName) {
         return superheroRepository.searchHeroList(superheroName);
+    }
+
+    public Superhero addSuperhero(Superhero superhero) {
+        return superheroRepository.addSuperhero(superhero);
+    }
+
+
+
+    public java.lang.String deleteSuperhero(java.lang.String superhero) {
+        return superheroRepository.deleteSuperhero(superhero);
+    }
+
+    public Superhero editSuperhero(Superhero editSuperhero) {
+        return superheroRepository.editSuperhero(editSuperhero);
     }
 }
