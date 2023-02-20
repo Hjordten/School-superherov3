@@ -2,6 +2,7 @@ package com.example.superherov3.controllers;
 
 import com.example.superherov3.models.Superhero;
 import com.example.superherov3.services.SuperheroService;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -19,9 +20,18 @@ public class MyController {
     }
 
     @GetMapping(path = "/herolist")
-    public ResponseEntity<List<Superhero>> getHeroList() {
-        List<Superhero> superheroList = superheroService.getHeroList();
-        return new ResponseEntity<>(superheroList, HttpStatus.OK);
+    public ResponseEntity<String> getHeroList() {
+        superheroService.getHeroList();
+        //return new ResponseEntity<>(superheroList, HttpStatus.OK);
+
+        HttpHeaders responsHeaders = new HttpHeaders();
+        responsHeaders.set("Content type", "text/html");
+
+        return new ResponseEntity<>(
+                "<html><body><h1>" +
+                 superheroService.getHeroList() +
+                "</h1></body></html>"
+                ,responsHeaders, HttpStatus.OK);
     }
 
     @GetMapping(path = "herolist/{id}")
